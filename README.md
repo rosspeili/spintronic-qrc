@@ -11,7 +11,7 @@ Part of [ARPA Quantum Logical Systems — QONDRA](https://github.com/arpaqls) &n
 ![Python](https://img.shields.io/badge/Python-3.11%2B-C7E4CA?style=flat-square&labelColor=756F6A)
 ![PennyLane](https://img.shields.io/badge/PennyLane-0.39%2B-DBD3DC?style=flat-square&labelColor=756F6A)
 [![License](https://img.shields.io/badge/License-MIT-F4ECC8?style=flat-square&labelColor=756F6A)](LICENSE)
-![Version](https://img.shields.io/badge/Version-0.1.0-F0D9CC?style=flat-square&labelColor=756F6A)
+![Readout](https://img.shields.io/badge/Readout-Ridge%20%2F%20sklearn-F0D9CC?style=flat-square&labelColor=756F6A)
 
 </div>
 
@@ -112,7 +112,7 @@ See [`docs/testing.md`](docs/testing.md) for the full guide.
 ## References
 
 See [`REFERENCES.md`](REFERENCES.md) for the full bibliography.  
-Key: Fujii & Nakajima (2017), Dambre et al. (2012), Jaeger (2001), Mujal et al. (2021).
+Key: Fujii & Nakajima (2017), Nakajima (2021), Dambre et al. (2012), Mujal et al. (2021).
 
 ---
 

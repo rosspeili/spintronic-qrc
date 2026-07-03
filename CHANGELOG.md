@@ -8,7 +8,17 @@ and this project uses semantic versioning through the package version in
 
 ## [Unreleased]
 
-## [0.1.0] - 2026-07-03
+### Changed
+
+- Expanded `REFERENCES.md` with Crossref-verified bibliography (corrected DOIs for Dambre,
+  Mujal, Nakajima JPSJ, Domingo, Chen, Heyl; added QRC, spin-chain, and software cites).
+- README badges: replaced version badge with QRC-specific readout badge (Ridge / sklearn).
+
+### Removed
+
+- Internal researcher draft files (`refresults1.md`, `refresults2.md`, `suggestedref.md`)
+  after merging verified references.
+
 
 ### Added
 
