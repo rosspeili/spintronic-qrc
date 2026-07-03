@@ -1,0 +1,17 @@
+# Optional standalone conda env (use program .venv at Spintronics/ root when possible).
+name: spintronic-qrc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - jupyter
+  - jupyterlab
+  - pytest
+  - ruff
+  - pip:
+      - -e ".[notebooks]"

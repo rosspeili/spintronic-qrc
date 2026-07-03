@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "spintronic-qrc: Quantum Reservoir Computing with Spin Chain Dynamics"
+version: "0.1.0"
+date-released: 2026-07-03
+url: "https://github.com/ARPAQLS/spintronic-qrc"
+repository-code: "https://github.com/ARPAQLS/spintronic-qrc"
+license: MIT
+authors:
+  - name: "ARPA Quantum Logical Systems (QONDRA)"
+    email: "qondra@arpacorp.net"
+keywords:
+  - quantum computing
+  - quantum reservoir computing
+  - spin chains
+  - spintronics
+  - XXZ model
+  - temporal machine learning

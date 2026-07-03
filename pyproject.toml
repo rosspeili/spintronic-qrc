@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spintronic-qrc"
+version = "0.1.0"
+description = "Quantum Reservoir Computing with Spin Chain Dynamics"
+authors = [{ name = "ARPA Quantum Logical Systems (QONDRA)" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = [
+    "quantum",
+    "reservoir-computing",
+    "QRC",
+    "spintronics",
+    "spin-chain",
+    "XXZ",
+    "pennylane",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Programming Language :: Python :: 3",
+]
+# Core: QRC pipeline (PennyLane reservoir + sklearn readout + benchmark tasks).
+# Not copied from spinq-vqe — no NetworkX, QuSpin, mp-api, OpenFermion, etc.
+dependencies = [
+    "pennylane>=0.39",
+    "pennylane-lightning>=0.39",
+    "jax[cpu]",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+# Open-system QRC with Lindblad damping (QuTiP master equation)
+open = [
+    "qutip>=5.0",
+]
+# Cross-validate spin-chain dynamics against Qiskit Aer
+crossval = [
+    "qiskit>=1.0",
+    "qiskit-aer>=0.14",
+]
+# Hyperparameter sweeps: chain length N, evolution time τ, disorder W
+tuning = [
+    "optuna>=3.0",
+]
+# Interactive notebook plots (not required for the library or tests)
+viz = [
+    "plotly>=5.0",
+]
+dev = [
+    "jupyter",
+    "jupyterlab",
+    "pytest",
+    "ruff",
+]
+# Typical notebook workflow: core + dev + tuning + viz
+notebooks = ["spintronic-qrc[dev,tuning,viz]"]
+# Full research stack including open-system and cross-validation extras
+all = ["spintronic-qrc[open,crossval,tuning,viz,dev]"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E203", "E501"]
