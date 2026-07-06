@@ -11,6 +11,7 @@ reservoir : Disordered XXZ spin chain Hamiltonian and time-evolution helpers
 encoder   : Input signal injection into the reservoir
 readout   : Pauli expectation-value feature extraction
 trainer   : Classical Ridge regression output layer
+pipeline  : End-to-end encode → evolve → readout → Ridge QRC loop
 gates     : Spintronic-inspired PennyLane custom gate set
 tasks     : Benchmark time-series generators (NARMA-10, Mackey-Glass)
 utils     : Plotting helpers with consistent pastel palette
@@ -29,6 +30,7 @@ __all__ = [
     "encoder",
     "readout",
     "trainer",
+    "pipeline",
     "gates",
     "tasks",
     "utils",

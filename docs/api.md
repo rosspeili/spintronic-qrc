@@ -34,6 +34,30 @@ Package: `spintronic_qrc` (install with `pip install -e ".[dev]"`).
 | `train_ridge(X, y, alpha)` | Fit standardized Ridge regressor |
 | `predict(model, X)` | Predict from features |
 
+## `pipeline`
+
+End-to-end QRC loop: encode → `ApproxTimeEvolution` → Pauli readout → Ridge (Fujii & Nakajima 2017).
+
+| Function / class | Description |
+|------------------|-------------|
+| `QRCConfig` | Dataclass: `n_sites`, `evolution_time`, `n_trotter_steps`, exchange/disorder, `encoding`, `washout`, readout settings |
+| `QRCResult` | `X`, `y`, `train_result`, `train_rmse`, `test_rmse`, `predictions`, `config` |
+| `collect_features(inputs, config)` | Run reservoir over a 1-D series; returns `(n - washout, n_features)` |
+| `run_qrc(inputs, targets, config, ...)` | Features + chronological Ridge train/test split |
+
+```python
+from spintronic_qrc.pipeline import QRCConfig, run_qrc
+from spintronic_qrc.tasks import narma10
+
+u, y = narma10(length=200, seed=42)
+config = QRCConfig(n_sites=6, evolution_time=1.0, n_trotter_steps=10, washout=50)
+result = run_qrc(u, y, config)
+print(result.test_rmse)
+```
+
+State is carried forward across timesteps via ``StatePrep`` + ``qml.state()`` handoff
+between per-step QNode calls (no reset to ``|0⟩^N`` between steps).
+
 ## `gates`
 
 | Symbol | Description |
