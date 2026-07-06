@@ -20,6 +20,7 @@ Tests use small chain sizes and short NARMA-10 series for speed (< 30 s on CPU).
 | `reservoir` | `test_reservoir.py` | Disorder sampling, Hamiltonian build, device |
 | `tasks` | `test_tasks.py` | NARMA-10 shapes/reproducibility, Mackey-Glass |
 | `trainer`, `readout` | `test_trainer.py` | Ridge fit, feature dimensions |
+| `pipeline` | `test_pipeline.py` | Feature matrix shape, NARMA-10 end-to-end `run_qrc` |
 
 ## Fixtures
 

@@ -38,6 +38,7 @@ Two parallel research threads:
 spintronic-qrc/
 ├── src/spintronic_qrc/
 │   ├── reservoir.py   # XXZ chain Hamiltonian + device helpers
+│   ├── pipeline.py    # End-to-end encode → evolve → readout → Ridge QRC loop
 │   ├── encoder.py     # Input injection (local / global)
 │   ├── readout.py     # Pauli expectation observables
 │   ├── trainer.py     # Ridge output layer

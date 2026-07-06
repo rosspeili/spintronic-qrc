@@ -8,6 +8,12 @@ and this project uses semantic versioning through the package version in
 
 ## [Unreleased]
 
+### Added
+
+- `pipeline` module: `QRCConfig`, `collect_features`, `run_qrc`, and `QRCResult` for the
+  end-to-end encode → `ApproxTimeEvolution` → Pauli readout loop (#1).
+- Unit tests for the QRC pipeline (`tests/test_pipeline.py`).
+
 ### Changed
 
 - Expanded `REFERENCES.md` with Crossref-verified bibliography (corrected DOIs for Dambre,
@@ -36,4 +42,4 @@ and this project uses semantic versioning through the package version in
 
 ### Tests
 
-- 16 unit tests covering reservoir, tasks, readout, and trainer (`pytest tests/ -v`).
+- 16 unit tests covering reservoir, tasks, readout, trainer, and pipeline (`pytest tests/ -v`).
